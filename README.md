@@ -1,5 +1,5 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
-Coded by Alyssie
+Coded by DevAshu
 
 #### The Challenge: 
 - View the optimal layout for the site depending on their device's screen size
