@@ -1,0 +1,207 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">  
+    <title>Frontend Mentor | Shortly URL shortening API Challenge | DevAshu</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-toggle="modal" data-target="#popup"><img src="assets/img/logo.svg" alt="Shortly Logo"></a>
+            <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="burger-menu"></div>
+                <div class="burger-menu"></div>
+                <div class="burger-menu"></div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav pt-4 pt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#popup">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#popup">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#popup">Resources</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto br-top pt-4 pb-4 pt-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="#" data-toggle="modal" data-target="#popup">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link button small mb-3 mb-lg-0"  data-toggle="modal" data-target="#popup">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="loader" class="my-auto">
+        <div class="loader">
+            LOADING
+        </div>
+    </div>
+    <section id="header">
+        <div class="container">
+            <div class="row h-100 relative">
+                <div class="col-12 col-lg-6 my-md-auto">
+                    <h1 class="title">More than just<br>shorter links</h1>
+                    <p class="sub-title">Build your brand’s recognition and get detailed insights
+                    on how your links are performing.</p>
+                    <button class="button big smooth-scroll wow animate__animated animate__tada">Get Started</button>
+                </div>
+                <img src="assets/img/illustration-working.svg" alt="Working illustration" class="illustration">
+            </div>
+        </div>
+    </section>
+    <section id="service">
+        <div class="container relative">
+            <div class="row">
+                <div class="shorten">
+                    <form action="#" id="form-shorten" onsubmit="shorten()" class="mb-0">
+                        <label for="theurl" class="d-none">URL:</label>
+                        <input type="text" id="theurl" name="theurl" placeholder="Shorten a link here...">
+                        <p id="err-msg"></p>
+                        <button id="shorten" class="button big">Shorten It!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row ripple">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="item">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container relative blocks">
+            <div class="row details">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <h2 class="title wow animate__animated animate__slideInUp">Advanced Statistics</h2>
+                    <p class="sub-title wow animate__animated animate__slideInUp">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+                </div>
+            </div>
+            <div class="row columns">
+                <hr class="hr wow animate__animated animate__zoomIn animate__delay-1s">
+                <div class="col-12 col-lg-4 first">
+                    <div class="block wow animate__animated animate__slideInUp">
+                        <div class="img-cont">
+                            <img src="assets/img/icon-brand-recognition.svg" alt="Chart" class="icon">
+                        </div>
+                        <h3 class="title">Brand Recognition</h3>
+                        <p class="desc">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 second">
+                    <div class="block wow animate__animated animate__slideInUp">
+                        <div class="img-cont">
+                            <img src="assets/img/icon-detailed-records.svg" alt="Odometer" class="icon">
+                        </div>
+                        <h3 class="title">Detailed Records</h3>
+                        <p class="desc">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions..</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 third">
+                    <div class="block wow animate__animated animate__slideInUp">
+                        <div class="img-cont">
+                            <img src="assets/img/icon-fully-customizable.svg" alt="Paint brush" class="icon">
+                        </div>
+                        <h3 class="title">Fully Customizable</h3>
+                        <p class="desc">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="boost" style="background-image: url('assets/img/bg-boost-desktop.svg');">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-12 my-auto">
+                    <h2 class="title wow animate__animated animate__slideInUp">Boost your links today</h2>
+                    <button class="button big smooth-scroll wow animate__animated animate__slideInUp">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="assets/img/logo.svg" alt="Shortly Logo" class="logo">
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="d-block mb-5 mb-md-0">
+                                <p class="title">Features</p>
+                                <a href="#" class="smooth-scroll">Link Shortening</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Branded Links</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Analytics</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="d-block mb-5 mb-md-0">
+                                <p class="title">Resources</p>
+                                <a href="#" data-toggle="modal" data-target="#popup">Blog</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Developers</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Support</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="d-block mb-5 mb-md-0">
+                                <p class="title">Company</p>
+                                <a href="#" data-toggle="modal" data-target="#popup">About</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Our Team</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Careers</a>
+                                <a href="#" data-toggle="modal" data-target="#popup">Contact</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="d-flex icons">
+                                <a href="#" data-toggle="modal" data-target="#popup" class="socmed"><img src="assets/img/icon-facebook.svg" alt="FB" class="main"><img src="assets/img/icon-facebook-inverted-svg.png" alt="FB" class="alt"></a>
+                                <a href="#" data-toggle="modal" data-target="#popup" class="socmed"><img src="assets/img/icon-twitter.svg" alt="T" class="main"><img src="assets/img/icon-twitter-inverted-svg.png" alt="T" class="alt"></a>
+                                <a href="#" data-toggle="modal" data-target="#popup" class="socmed"><img src="assets/img/icon-pinterest.svg" alt="P" class="main"><img src="assets/img/icon-pinterest-inverted-svg.png" alt="P" class="alt"></a>
+                                <a href="#" data-toggle="modal" data-target="#popup" class="socmed"><img src="assets/img/icon-instagram.svg" alt="IG" class="main"><img src="assets/img/icon-instagram-inverted-svg.png" alt="IG" class="alt"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G/hub/url-shortening-api-landing-page-SyuP9NjV5" target="_blank">Frontend Mentor</a> | Coded by <a href="https://github.com/Ashutosh102" data-toggle="modal" data-target="#popup">DevAshu</a>
+    </div>
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="popupLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body px-5 py-4">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p class="mb-3 text-center">This is a one-pager website with a URL shortening feature made for Frontend Mentor challenge.</p>
+                    <a href="https://www.frontendmentor.io/solutions/html-css-jquery-woBspPXgU" target="_blank" class="button big d-block text-center mb-2">View Solution</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</html>
